@@ -57,12 +57,22 @@ public class StackTugasMahasiswa02 {
     }
 
     public void print() {
-        for (int i = 0; i <= top; i++) {
+        for (int i = top; i >= 0; i--) {
             System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
         }
         System.out.println("");
     }
-    public static void main(String[] args) {
-        
+    // modif
+    public Mahasiswa02 low() {
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            System.out.println("Stack kosong!");
+            return null;
+        }
+    }
+
+    public int jmlTugas() {
+        return top + 1;
     }
 }
