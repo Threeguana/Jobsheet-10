@@ -35,6 +35,9 @@ public class MahasiswaMain02 {
                         int nilai = scan.nextInt();
                         dinilai.tugasDinilai(nilai);
                         System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
+                        // praktikum 2
+                        String biner = stack.konversiDesimalKeBiner(nilai);
+                        System.out.println("Nilai Biner Tugas: " + biner);
                     } 
                     break;
                 case 3:
@@ -47,7 +50,7 @@ public class MahasiswaMain02 {
                     System.out.println("Daftar semua tugas");
                     System.out.println("Nama\tNIM\tKelas");
                     stack.print();
-                    // modif
+                    // modif praktikum 1
                     Mahasiswa02 terbawah = stack.low();
                     if (terbawah != null) {
                         System.out.println("Tugas pertama dikumpulkan oleh: " + terbawah.nama);

@@ -62,7 +62,7 @@ public class StackTugasMahasiswa02 {
         }
         System.out.println("");
     }
-    // modif
+    // modif praktikum 1
     public Mahasiswa02 low() {
         if (!isEmpty()) {
             return stack[0];
@@ -74,5 +74,20 @@ public class StackTugasMahasiswa02 {
 
     public int jmlTugas() {
         return top + 1;
+    }
+
+    // praktikum 2
+    public String konversiDesimalKeBiner(int nilai) {
+        StackKonversi02 stack = new StackKonversi02();
+        while (nilai > 0) {
+            int sisa = nilai % 2;
+            stack.push(sisa);
+            nilai = nilai / 2;
+        }
+        String biner = new String();
+        while (!stack.isEmpty()) {
+            biner += stack.pop();
+        }
+        return biner;
     }
 }
