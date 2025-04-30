@@ -16,7 +16,4 @@ public class Mahasiswa02 {
     void tugasDinilai(int nilai) {
         this.nilai = nilai;
     }
-    public static void main (String[] args){
-        
-    }
 }
